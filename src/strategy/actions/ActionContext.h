@@ -153,7 +153,7 @@ public:
         creators["war stomp"] = &ActionContext::war_stomp;
         creators["auto talents"] = &ActionContext::auto_talents;
         creators["auto learn spell"] = &ActionContext::auto_learn_spell;
-        creators["auto teleport for level"] = &ActionContext::auto_teleport_for_level;
+        creators["auto maintenance on levelup"] = &ActionContext::auto_maintenance_on_levelup;
         creators["auto upgrade equip"] = &ActionContext::auto_upgrade_equip;
         creators["xp gain"] = &ActionContext::xp_gain;
         creators["invite nearby"] = &ActionContext::invite_nearby;
@@ -324,7 +324,7 @@ private:
     static Action* war_stomp(PlayerbotAI* botAI) { return new CastWarStompAction(botAI); }
     static Action* auto_talents(PlayerbotAI* botAI) { return new AutoSetTalentsAction(botAI); }
     static Action* auto_learn_spell(PlayerbotAI* botAI) { return new AutoLearnSpellAction(botAI); }
-    static Action* auto_teleport_for_level(PlayerbotAI* botAI) { return new AutoTeleportForLevelAction(botAI); }
+    static Action* auto_maintenance_on_levelup(PlayerbotAI* botAI) { return new AutoMaintenanceOnLevelupAction(botAI); }
     static Action* auto_upgrade_equip(PlayerbotAI* botAI) { return new AutoUpgradeEquipAction(botAI); }
     static Action* xp_gain(PlayerbotAI* botAI) { return new XpGainAction(botAI); }
     static Action* invite_nearby(PlayerbotAI* botAI) { return new InviteNearbyToGroupAction(botAI); }
